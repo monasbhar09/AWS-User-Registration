@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_csye6225-spring-boot-starter-webapp-master" default="compile.module.csye6225-spring-boot-starter-webapp-master">
+  <dirname property="module.csye6225-spring-boot-starter-webapp-master.basedir" file="${ant.file.module_csye6225-spring-boot-starter-webapp-master}"/>
+  
+  <property name="module.jdk.home.csye6225-spring-boot-starter-webapp-master" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.csye6225-spring-boot-starter-webapp-master" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.csye6225-spring-boot-starter-webapp-master" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.csye6225-spring-boot-starter-webapp-master" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="csye6225-spring-boot-starter-webapp-master.output.dir" value="${module.csye6225-spring-boot-starter-webapp-master.basedir}/out/production/csye6225-spring-boot-starter-webapp-master"/>
+  <property name="csye6225-spring-boot-starter-webapp-master.testoutput.dir" value="${module.csye6225-spring-boot-starter-webapp-master.basedir}/out/test/csye6225-spring-boot-starter-webapp-master"/>
+  
+  <path id="csye6225-spring-boot-starter-webapp-master.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="csye6225-spring-boot-starter-webapp-master.module.production.classpath">
+    <path refid="${module.jdk.classpath.csye6225-spring-boot-starter-webapp-master}"/>
+  </path>
+  
+  <path id="csye6225-spring-boot-starter-webapp-master.runtime.production.module.classpath">
+    <pathelement location="${csye6225-spring-boot-starter-webapp-master.output.dir}"/>
+  </path>
+  
+  <path id="csye6225-spring-boot-starter-webapp-master.module.classpath">
+    <path refid="${module.jdk.classpath.csye6225-spring-boot-starter-webapp-master}"/>
+    <pathelement location="${csye6225-spring-boot-starter-webapp-master.output.dir}"/>
+  </path>
+  
+  <path id="csye6225-spring-boot-starter-webapp-master.runtime.module.classpath">
+    <pathelement location="${csye6225-spring-boot-starter-webapp-master.testoutput.dir}"/>
+    <pathelement location="${csye6225-spring-boot-starter-webapp-master.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.csye6225-spring-boot-starter-webapp-master">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.csye6225-spring-boot-starter-webapp-master">
+    <patternset refid="excluded.from.module.csye6225-spring-boot-starter-webapp-master"/>
+  </patternset>
+  
+  
+  <target name="compile.module.csye6225-spring-boot-starter-webapp-master" depends="compile.module.csye6225-spring-boot-starter-webapp-master.production,compile.module.csye6225-spring-boot-starter-webapp-master.tests" description="Compile module csye6225-spring-boot-starter-webapp-master"/>
+  
+  <target name="compile.module.csye6225-spring-boot-starter-webapp-master.production" depends="register.custom.compilers" description="Compile module csye6225-spring-boot-starter-webapp-master; production classes"/>
+  
+  <target name="compile.module.csye6225-spring-boot-starter-webapp-master.tests" depends="register.custom.compilers,compile.module.csye6225-spring-boot-starter-webapp-master.production" description="compile module csye6225-spring-boot-starter-webapp-master; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.csye6225-spring-boot-starter-webapp-master" description="cleanup module">
+    <delete dir="${csye6225-spring-boot-starter-webapp-master.output.dir}"/>
+    <delete dir="${csye6225-spring-boot-starter-webapp-master.testoutput.dir}"/>
+  </target>
+</project>

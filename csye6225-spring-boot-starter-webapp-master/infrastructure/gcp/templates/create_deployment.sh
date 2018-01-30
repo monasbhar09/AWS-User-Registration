@@ -1,0 +1,1 @@
+gcloud deployment-manager deployments create csye6225-deployemnt-manager --config deployment_manager.yaml
