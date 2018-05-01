@@ -1,4 +1,4 @@
-# csye6225-fall2017
+# User task recorder
 Team Members Information:
 Dhanashree Chavan, 001222495, chavan.d@husky.neu.edu
 Monas Bhar, 001232781, bhar.m@husky.neu.edu
